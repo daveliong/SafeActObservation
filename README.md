@@ -11,5 +11,5 @@ SharePoint Framework: DLL that contains the SharePoint services that are re-usab
 SAO solution package: Custom solution package that contains CSS, list and display templates content web part feature that can added onto a search page.
 
 ## References
-- Read the [As-Built documentation] (SAO-AsBuilt.pdf)
+- Read the ![As-Built documentation](SAO-AsBuilt.pdf)
 - For more details about this project visit [my blog site](https://davidliong.wordpress.com/case-studies/enterprise-search/)
