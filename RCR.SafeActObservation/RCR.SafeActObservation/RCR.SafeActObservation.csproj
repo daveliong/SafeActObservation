@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89459660-93F2-43BA-9E22-44CD0E7142E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RCR.SafeActObservation</RootNamespace>
+    <AssemblyName>RCR.SafeActObservation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Safe Act Observation\Safe Act Observation.EventReceiver.cs">
+      <DependentUpon>Safe Act Observation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DisplayTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0307c553-d4db-4830-b916-f81a421dc966}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Safe Act Observation\Safe Act Observation.feature">
+      <FeatureId>{ad4a9143-7c38-46fd-a66f-d4a829eba887}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cd48bfed-fdd5-4998-a4aa-16c1de25f4a1}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{e5ac3cd1-7ada-4339-9392-6f5d781ebf5f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="SAO Settings\SAO Settings Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{14632857-2462-4719-be7c-d244b78fde2c}</SharePointProjectItemId>
+    </None>
+    <None Include="SAO Settings\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e4b5be40-a037-4b41-8629-4b4813249f2f}</SharePointProjectItemId>
+    </None>
+    <None Include="ServerStyleSheets\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c22e7875-7702-4db9-9eba-472eed68ad98}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DisplayTemplates\Control_SAO_ListHeader.html" />
+    <Content Include="DisplayTemplates\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DisplayTemplates\Item_SAO_ListRow.html" />
+    <Content Include="DisplayTemplates\jquery-1.10.1.min.js" />
+    <Content Include="DisplayTemplates\jquery-1.11.1.min.js" />
+    <Content Include="DisplayTemplates\jquery-2.1.0.min.js" />
+    <Content Include="DisplayTemplates\jquery.dataTables-1.min.js" />
+    <Content Include="DisplayTemplates\jquery.dataTables.min.js" />
+    <Content Include="DisplayTemplates\ShowMoreResults.js" />
+    <Content Include="Features\Safe Act Observation\Safe Act Observation.Template.xml">
+      <DependentUpon>Safe Act Observation.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\RCR\RCR-Logo.jpg" />
+    <Content Include="SAO Settings\Elements.xml" />
+    <Content Include="SAO Settings\SAO Settings Instance\Elements.xml" />
+    <Content Include="SAO Settings\Schema.xml" />
+    <Content Include="ServerStyleSheets\back_disabled.png" />
+    <Content Include="ServerStyleSheets\back_enabled.png" />
+    <Content Include="ServerStyleSheets\back_enabled_hover.png" />
+    <Content Include="ServerStyleSheets\Elements.xml" />
+    <Content Include="ServerStyleSheets\forward_disabled.png" />
+    <Content Include="ServerStyleSheets\forward_enabled.png" />
+    <Content Include="ServerStyleSheets\forward_enabled_hover.png" />
+    <Content Include="ServerStyleSheets\jquery.dataTables.css" />
+    <Content Include="ServerStyleSheets\sort_asc.png" />
+    <Content Include="ServerStyleSheets\sort_asc_disabled.png" />
+    <Content Include="ServerStyleSheets\sort_both.png" />
+    <Content Include="ServerStyleSheets\sort_desc.png" />
+    <Content Include="ServerStyleSheets\sort_desc_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RCR.SP2013.Framework\RCR.SP.Framework\RCR.SP.Framework\RCR.SP.Framework.csproj">
+      <Project>{f1b46ce3-a256-44fe-95eb-4cf5992f2eef}</Project>
+      <Name>RCR.SP.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

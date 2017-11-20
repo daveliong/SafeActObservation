@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="SAO Settings" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/SAO Settings" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x010018137c3749b9457eb08f63a1de5718fb" Name="ListFieldsContentType">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{9388dd34-d53b-4776-87d9-c1350cfc4539}" Name="SettingsCategory" />
+          <FieldRef ID="{22521e55-b4d9-482e-928d-2dd5690d4d20}" Name="SettingsValue" />
+        </FieldRefs>
+    </ContentType>
+    <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+    <ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>  
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field Name="SettingsCategory" ID="{9388dd34-d53b-4776-87d9-c1350cfc4539}" DisplayName="Settings Category"  StaticName="SettingsCategory" Type="Choice" Required="TRUE" Group="Custom Columns" Sortable="TRUE">
+        <CHOICES>
+          <CHOICE>devmode</CHOICE>
+          <CHOICE>UseProxy</CHOICE>
+          <CHOICE>UseProxyEmail</CHOICE>
+          <CHOICE>ProxyIP</CHOICE>
+          <CHOICE>ProxyPort</CHOICE>
+          <CHOICE>ProxyUser</CHOICE>
+          <CHOICE>ProxyPassword</CHOICE>
+          <CHOICE>Domain</CHOICE>
+          <CHOICE>SMTPServer</CHOICE>
+          <CHOICE>MailPort</CHOICE>
+          <CHOICE>EmailTo</CHOICE>
+          <CHOICE>EmailFrom</CHOICE>
+          <CHOICE>ManagedPath</CHOICE>
+          <CHOICE>PrimaryAdmin</CHOICE>
+          <CHOICE>SecondaryAdmin</CHOICE>
+          <CHOICE>SiteTemplateFilePath</CHOICE>
+          <CHOICE>ListTemplateFilePath</CHOICE>
+          <CHOICE>ListTemplateFileDesc</CHOICE>
+          <CHOICE>ListNameEventReciever</CHOICE>
+          <CHOICE>ConsoleApp</CHOICE>
+          <CHOICE>ValidationPageUrl</CHOICE>
+          <CHOICE>Timeout</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="SettingsValue" ID="{22521e55-b4d9-482e-928d-2dd5690d4d20}" DisplayName="Settings Value" StaticName="SettingsValue" Type="Note" Group="Custom Columns" Sortable="TRUE"/>
+    </Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="SettingsCategory" /><FieldRef Name="SettingsValue" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

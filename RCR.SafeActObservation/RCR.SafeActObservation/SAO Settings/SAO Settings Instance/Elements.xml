@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="SAO Settings" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/SAO Settings" Description="Safe Act Observation List Instance">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">devmode</Field>
+          <Field Name="SettingsCategory">devmode</Field>
+          <Field Name="SettingsValue">true</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">EmailTo</Field>
+          <Field Name="SettingsCategory">EmailTo</Field>
+          <Field Name="SettingsValue">david.liong@rcrtom.com.au</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">EmailFrom</Field>
+          <Field Name="SettingsCategory">EmailFrom</Field>
+          <Field Name="SettingsValue">no-reply@rcrtom.com.au</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">SMTPServer</Field>
+          <Field Name="SettingsCategory">SMTPServer</Field>
+          <Field Name="SettingsValue">mail.rcrtom.com.au</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Domain</Field>
+          <Field Name="SettingsCategory">Domain</Field>
+          <Field Name="SettingsValue">RCRTom</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

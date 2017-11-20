@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCR.SafeActObservation", "RCR.SafeActObservation\RCR.SafeActObservation.csproj", "{89459660-93F2-43BA-9E22-44CD0E7142E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCR.SP.Framework", "..\..\RCR.SP2013.Framework\RCR.SP.Framework\RCR.SP.Framework\RCR.SP.Framework.csproj", "{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.webservices.rcrtom.com.au:8080/tfs/dev
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = RCR.SafeActObservation\\RCR.SafeActObservation.csproj
+		SccProjectName1 = RCR.SafeActObservation
+		SccLocalPath1 = RCR.SafeActObservation
+		SccProjectUniqueName2 = ..\\..\\RCR.SP2013.Framework\\RCR.SP.Framework\\RCR.SP.Framework\\RCR.SP.Framework.csproj
+		SccProjectName2 = ../../RCR.SP2013.Framework/RCR.SP.Framework/RCR.SP.Framework
+		SccLocalPath2 = ..\\..\\RCR.SP2013.Framework\\RCR.SP.Framework\\RCR.SP.Framework
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89459660-93F2-43BA-9E22-44CD0E7142E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B46CE3-A256-44FE-95EB-4CF5992F2EEF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

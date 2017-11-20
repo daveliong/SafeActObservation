@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="DisplayTemplates\" Type="ElementManifest" />
+    <ProjectItemFile Source="Control_SAO_ListHeader.html" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="Item_SAO_ListRow.html" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.dataTables.min.js" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.dataTables-1.min.js" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.11.1.min.js" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-2.1.0.min.js" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.10.1.min.js" Target="DisplayTemplates\" Type="ElementFile" />
+    <ProjectItemFile Source="ShowMoreResults.js" Target="DisplayTemplates\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

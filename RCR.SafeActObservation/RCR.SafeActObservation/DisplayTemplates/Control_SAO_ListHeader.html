@@ -1,0 +1,115 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>SAO Grid List Header</title>
+    <!--
+       RESOURCES:
+       1. http://devspoint.wordpress.com/2013/08/20/using-jquery-datatables-with-search-display-templates/
+       2. http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2014/02/20/spc14-post-using-display-templates-to-format-search-results-as-a-grid.aspx
+       3. http://legacy.datatables.net/usage/
+       4. http://www.datatables.net/examples/advanced_init/length_menu.html
+    -->
+    <!--[if gte mso 9]><xml>
+    <mso:CustomDocumentProperties>
+    <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+    <mso:MasterPageDescription msdt:dt="string">This is a custom Safe Act Observation Control Display Template that will list the items.</mso:MasterPageDescription>
+    <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+    <mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+    <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+    <mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+    <mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+    <mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+    <mso:HtmlDesignStatusAndPreview msdt:dt="string">http://vm304/search/SAO/_catalogs/masterpage/Display Templates/Content Web Parts/Control_SAO_List.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+    </mso:CustomDocumentProperties>
+    </xml><![endif]-->
+
+</head>
+
+
+<body>
+    <script>
+        $includeScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/jquery-1.10.1.min.js");
+        $includeScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/ShowMoreResults.js");
+
+        //$includeScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/jquery-1.11.1.min.js");
+        $includeScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Content Web Parts/jquery.dataTables-1.min.js");
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Server Style Sheets/jquery.dataTables.css");
+    </script>
+
+    <div id="Control_Grid">
+
+        <!--#_
+        if (!$isNull(ctx.ClientControl) &&
+            !$isNull(ctx.ClientControl.shouldRenderControl) &&
+            !ctx.ClientControl.shouldRenderControl())
+        {
+            return "";
+        }
+        ctx.ListDataJSONGroupsKey = "ResultTables";
+        var $noResults = Srch.ContentBySearch.getControlTemplateEncodedNoResultsMessage(ctx.ClientControl);
+        var noResultsClassName = "ms-srch-result-noResults";
+
+        var hiddenElmId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_Results_");
+        var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_Table_");
+        var headerRowId = $htmlEncode(encodedId + "_HeaderRow_");
+        ctx.ManagedPropertyNames = [];
+
+        ctx.OnPostRender = [];
+        ctx.OnPostRender.push(function () {
+
+            for(var i = 0; i < ctx.ManagedPropertyNames.length; i++)
+            {
+               var columnName = ctx.ManagedPropertyNames[i];
+               var displayName = columnName.toString().replace("SAO", "");
+
+                if (displayName == "ListItemID")
+                    displayName = "ID";
+
+               $(".resultsTableHeader").append("<th align='left'>" + displayName + "</th>");
+            }
+
+            $("#" + encodedId).dataTable({"lengthMenu": [[50, 30, 15], [50, 30, 15]], "order": [[ 1, "asc" ]],  "pagingType": "full_numbers", "bPaginate": true, "bLengthChange": true, "bFilter": true, "bAutoWidth": true, "bInfo": true,  "bJQueryUI": false, "bSort": true });
+            ShowMoreResults(ctx, hiddenElmId);
+        });
+
+
+        var ListRenderRenderWrapper = function(itemRenderResult, inCtx, tpl)
+        {
+            var iStr = [];
+            iStr.push(itemRenderResult);
+            return iStr.join('');
+        }
+        ctx['ItemRenderWrapper'] = ListRenderRenderWrapper;
+
+        var currentUrl = window.location.href;
+		var bottomPageUrl = currentUrl + "#bottomPage";
+		var topPageUrl = currentUrl + "#topPage";
+        _#-->
+        <div class="topNav">
+            [ <a href="_#= bottomPageUrl =#_" name="topPage" class="topNavLink" title="Go to the bottom search result page">Go to bottom</a> ]
+        </div>
+        <table id="_#= encodedId =#_" class="artis-tasktable">
+            <thead>
+                <tr id="_#= headerRowId =#_" class="resultsTableHeader"></tr>
+            </thead>
+            <tbody>
+                _#= ctx.RenderGroups(ctx) =#_
+            </tbody>
+        </table>
+        <div id="_#= hiddenElmId =#_" class="resultsNextPrev"></div>
+        <div class="bottomNav">
+            [ <a href="_#= topPageUrl =#_" name="bottomPage" class="bottomNavLink" title="Go to the top search result page">Go to top</a> ]
+        </div>
+        <!--#_
+
+
+        if (ctx.ClientControl.get_shouldShowNoResultMessage())
+        {
+        _#-->
+        <div class="_#= noResultsClassName =#_">_#= $noResults =#_</div>
+        <!--#_
+        }
+        _#-->
+
+    </div>
+</body>
+</html>

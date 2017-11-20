@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e5ac3cd1-7ada-4339-9392-6f5d781ebf5f" solutionId="e5ac3cd1-7ada-4339-9392-6f5d781ebf5f" resetWebServer="false" sharePointProductVersion="15.0" name="RCR.SafeActObservation" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="ad4a9143-7c38-46fd-a66f-d4a829eba887" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="cd48bfed-fdd5-4998-a4aa-16c1de25f4a1" />
+  </projectItems>
+</package>

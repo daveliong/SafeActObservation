@@ -1,0 +1,144 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Safety Item</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays the default result item template.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId', 'ListItemID':'ListItemID','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor', 'SAODivision':'SAODivision', 'SAOLOB':'SAOLOB', 'SAOObservationDate':'SAOObservationDate',  'SAOObserverName':'SAOObserverName', 'SAOSHEQRep':'SAOSHEQRep', 'SAOStatus':'SAOStatus', 'SAOWorkArea':'SAOWorkArea', 'LinkFilename':'LinkFilename', 'count':'count'</mso:ManagedPropertyMapping>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://search.webservicestest.rcrtom.com.au/_catalogs/masterpage/Display Templates/Search/Item_Safety.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+<style>
+
+ </style>
+</head>
+<body>
+ 
+    <div id="Item_Safety">
+      
+<!--#_
+    ctx.OnPostRender = [];
+    ctx.OnPostRender.push(ctx, function () {
+  _#-->
+               
+<!--#_
+    });
+ _#-->
+
+<!--#_ 
+
+        if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+
+            var domainName = window.location.hostname
+
+            if (domainName.toLowerCase().indexOf("search.webservicestest.rcrtom.com.au") > -1)
+            {
+                domainName = "vm212:8080"
+            }
+
+            var managedPath = "Corporate/Safety"
+            var formServerUrl = "/_layouts/FormServer.aspx?XmlLocation=/"
+            var SAOlistName = "SafeActObservations"
+
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+			var hoverId = id + Srch.U.Ids.hover;
+			var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Safety_HoverPanel.js";
+            $setResultItem(itemId, ctx.CurrentItem);
+					
+			var fileExtension = ctx.CurrentItem.FileExtension
+			var fileTitle =  ctx.CurrentItem.Title	
+			//var fileName = fileTitle.toLowerCase() + "." + fileExtension.toLowerCase()
+			var filePath =  ctx.CurrentItem.Path 
+			var fileDesc = ctx.CurrentItem.Description
+            var infoPathUrl = "http://" + domainName + "/" + managedPath + formServerUrl + managedPath + "/" + SAOlistName + "/" + fileTitle + "&DefaultItemOpen=1"
+    
+            var SAODivision = ctx.CurrentItem.SAODivision
+            var SAOLOB = ctx.CurrentItem.SAOLOB
+            var SAOObservationDate = ctx.CurrentItem.SAOObservationDate
+            var SAOObserverName = ctx.CurrentItem.SAOObserverName
+            var SAOSHEQRep = ctx.CurrentItem.SAOSHEQRep
+            var SAOStatus = ctx.CurrentItem.SAOStatus
+            var SAOWorkArea = ctx.CurrentItem.SAOWorkArea            
+     
+			var charPos = filePath.toLowerCase().indexOf(fileTitle.toLowerCase());		
+			var docID = ctx.CurrentItem.ListItemID
+			var displayForm = "/Forms/DispForm.aspx?ID=" + docID
+			var fileURL = filePath.substr(0, charPos)  + displayForm
+			var filePropertyView = fileURL
+							
+			ctx.CurrentItem.csr_Icon = Srch.U.getIconUrlByFileExtension(ctx.CurrentItem);		
+			ctx.CurrentItem.csr_OpenApp = "word";
+			ctx.currentItem_ShowHoverPanelCallback = Srch.U.getShowHoverPanelCallback(itemId, hoverId, hoverUrl);
+            ctx.currentItem_HideHoverPanelCallback = Srch.U.getHideHoverPanelCallback();
+
+            fileTitle = fileTitle.replace(".xml", "");
+          
+_#-->
+            
+            <div id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="WordItem" class="ms-srch-item"  style="width:900px" onmouseover="_#= ctx.currentItem_ShowHoverPanelCallback =#_" onmouseout="_#= ctx.currentItem_HideHoverPanelCallback =#_">
+				<!--_#=ctx.RenderBody(ctx)=#_
+                <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+				-->            
+				<table border="0" width="100%" cellpadding="2">	
+					<!---<tr>
+                       <th></th>
+                        <th></th>
+                        <th align="left">Title</th>
+                        <th align="left">Status</th>
+                        <th align="left">Divsion</th>
+                        <th align="left">LOB</th>
+                        <th align="left">Observer Name</th>
+                        <th align="left">SHEQ Rep</th>
+                        <th align ="left">Work Area</th>
+                    </tr>-->
+                    <tr>
+						<td  valign="top" width="5"><img src="_#= ctx.CurrentItem.csr_Icon =#_" title="Logo"/></td>
+                        <td valign="top" width="10">[ <a href="_#= filePropertyView =#_" title="View properties">View</a> ]</td>
+						<td align="left" valign="top" width="400">
+                            <a href="_#= infoPathUrl =#_" title="Click here to open file" target="_blank">
+                                <b>_#= fileTitle =#_</b>
+                            </a>					
+                            <!-- _#= ctx.CurrentItem.HitHighlightedSummary =#_ -->
+						</td>
+                        <td valign="top" width="50">
+                            <!--<b>SAO Status:</b>--> _#= SAOStatus =#_
+                        </td>
+                        <td valign="top" width="100">
+                            <!--<b>SAO Division:</b>--> _#= SAODivision =#_
+                            &nbsp;
+                        </td>
+                        <td valign="top" width="100">
+                            <!--<b>SAO LOB:</b>--> _#= SAOLOB =#_
+                        </td>
+                        <td valign="top" width="200">
+                            <!--<b>SAO Observation Name:</b>--> _#= SAOObserverName =#_
+                        </td>
+                        <td valign="top" width="200">
+                            <!--<b>SAO SHEQ Rep:</b>--> _#= SAOSHEQRep =#_
+                        </td>                      
+                        <td valign="top" width="300">
+                            <!-- <b>SAO Work Area:</b>--> _#= SAOWorkArea =#_
+                            <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer" />
+                        </td>		
+					</tr>	
+				</table>
+                		
+            </div>
+<!--#_ 
+        }
+    else {
+   _#-->
+        <div>Test 2</div>
+<!--#_          
+    } 
+_#-->
+    </div>
+</body>
+</html>

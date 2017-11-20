@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ServerStyleSheets" Url="_catalogs/masterpage/Display Templates/Server Style Sheets">
+    <File Path="ServerStyleSheets\jquery.dataTables.css" Url="jquery.dataTables.css" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="ServerStyleSheets\back_disabled.png" Url="back_disabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\back_enabled.png" Url="back_enabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\back_enabled_hover.png" Url="back_enabled_hover.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\forward_disabled.png" Url="forward_disabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\forward_enabled.png" Url="forward_enabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\forward_enabled_hover.png" Url="forward_enabled_hover.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\sort_asc.png" Url="sort_asc.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\sort_asc_disabled.png" Url="sort_asc_disabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\sort_both.png" Url="sort_both.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\sort_desc.png" Url="sort_desc.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="ServerStyleSheets\sort_desc_disabled.png" Url="sort_desc_disabled.png" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+  </Module>
+</Elements>

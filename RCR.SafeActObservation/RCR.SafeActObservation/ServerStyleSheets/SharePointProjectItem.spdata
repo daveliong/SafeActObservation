@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ServerStyleSheets\" Type="ElementManifest" />
+    <ProjectItemFile Source="jquery.dataTables.css" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="back_disabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="back_enabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="back_enabled_hover.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="forward_disabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="forward_enabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="forward_enabled_hover.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="sort_asc.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="sort_asc_disabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="sort_both.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="sort_desc.png" Target="ServerStyleSheets\" Type="ElementFile" />
+    <ProjectItemFile Source="sort_desc_disabled.png" Target="ServerStyleSheets\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

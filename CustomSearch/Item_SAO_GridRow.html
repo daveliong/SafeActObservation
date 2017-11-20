@@ -1,0 +1,167 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>SAO Grid Row</title>
+
+    <!--[if gte mso 9]><xml>
+    <mso:CustomDocumentProperties>
+    <mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+    <mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Title','Path','SecondaryFileExtension','ContentTypeId','EditorOWSUSER', 'LastModifiedTime','DocId', 'ListID','ListItemID','HitHighlightedSummary','HitHighlightedProperties','FileExtension','ViewsLifeTime','ParentLink','FileType','IsContainer','DisplayAuthor','LinkFilename','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'Description','Line 3'{Line 3}:'','Line 4'{Line 4}:'','Line 5'{Line 5}:'','Line 6'{Line 6}:'','Line 7'{Line 7}:'','Line 8'{Line 8}:'','Line 9'{Line 9}:'','Line 10'{Line 10}:''</mso:ManagedPropertyMapping>
+    <mso:MasterPageDescription msdt:dt="string">This Item Display Template is designed for Safe Act Observation. </mso:MasterPageDescription>
+    <mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+    <mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+    <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+    <mso:HtmlDesignStatusAndPreview msdt:dt="string">http://vm304/search/SAO/_catalogs/masterpage/Display Templates/Content Web Parts/Item_SAO_GridRow.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+    <mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+    </mso:CustomDocumentProperties>
+    </xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+    <div id="Item_GridRow">
+        <!--#_
+        var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_Diagnostic_");
+
+        var linkURL = $getItemValue(ctx, "Path");
+        linkURL.overrideValueRenderer($urlHtmlEncode);
+
+        var line1 = $getItemValue(ctx, "Line 1");
+        var pictureURL = $getItemValue(ctx, "Picture URL");
+        pictureURL.overrideValueRenderer($urlHtmlEncode);
+        var pictureId = encodedId + "picture";
+        var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 100, 100, ctx.CurrentItem, "cbs-picture3LinesImg", line1, pictureId);
+
+        window.cbsDiagnostic_RenderPropertyMappings = function(valueInfoObj)
+        {
+            var combinedManagedPropertiesMapping = "";
+            if(!$isNull(valueInfoObj) && !$isNull(valueInfoObj.propertyMappings) && !$isNull(valueInfoObj.propertyMappings.length))
+            {
+                for (var i = 0; i < valueInfoObj.propertyMappings.length; i++)
+                {
+                    var managedPropertyName = valueInfoObj.propertyMappings[i];
+                    combinedManagedPropertiesMapping += i == 0 ? managedPropertyName : String.format(Srch.Res.edisc_MultiValueFormat, managedPropertyName);
+                }
+            }
+            return $htmlEncode(combinedManagedPropertiesMapping);
+        }
+
+        var itemContainerTitle = null;
+        var canBuildItemContainerTitle = !$isNull(ctx.CurrentItemIdx) && !$isNull(ctx.CurrentGroup) &&
+            !$isNull(ctx.CurrentGroup.ResultRows) && !$isNull(ctx.CurrentGroup.ResultRows.length) &&
+            !isNaN(ctx.CurrentGroup.ResultRows.length) && !isNaN(ctx.CurrentItemIdx);
+        if(canBuildItemContainerTitle)
+        {
+            itemContainerTitle = String.format($resource("item_Diagnostic_ItemTitleFormat"), ctx.CurrentItemIdx + 1, ctx.CurrentGroup.ResultRows.length);
+        }
+
+        var containerId = encodedId + "container";
+        var pictureSlotContainerId = encodedId + "pictureSlotContainer";
+        var pictureContainerId = encodedId + "pictureContainer";
+        var pictureLinkId = encodedId + "pictureLink";
+        var pathContainerId = encodedId + "pathContainer";
+
+        var fileTitle =  ctx.CurrentItem.Title;
+        var filePath =  ctx.CurrentItem.Path;
+        var domainName = window.location.hostname;
+
+        if (domainName.toLowerCase().indexOf("search.webservicestest.rcrtom.com.au") > -1)
+        {
+            domainName = "vm212:8080"
+        }
+        var managedPath = "Corporate/Safety";
+        var formServerUrl = "/_layouts/FormServer.aspx?XmlLocation=/";
+        var SAOlistName = "SafeActObservations";
+        var infoPathUrl = "http://" + domainName + "/" + managedPath + formServerUrl + managedPath + "/" + SAOlistName + "/" + fileTitle + "&DefaultItemOpen=1";
+
+        var charPos = filePath.toLowerCase().indexOf(fileTitle.toLowerCase());
+        var displayForm = "Forms/DispForm.aspx?ID=";
+        var fileURL = filePath.substr(0, charPos)  + displayForm;
+        var filePropertyView = fileURL;
+
+        fileTitle = fileTitle.replace(".xml", "");
+
+        _#-->
+
+
+        <tr class="gridRow">
+            <!--#_
+            for(var lineNum = 1; lineNum <= 10; lineNum++)
+            {
+
+                var lineValueInfo = $getItemValue(ctx, String.format("Line {0}", lineNum));
+
+                if(!$isNull(lineValueInfo) && !$isEmptyString(cbsDiagnostic_RenderPropertyMappings(lineValueInfo)))
+                {
+                    var lineId = String.format("{0}line{1}", encodedId, lineNum);
+                    var slotName = String.format($resource("item_Diagnostic_SlotNameFormat"), lineNum);
+            _#-->
+            <!--#_
+                    if(lineValueInfo.isEmpty)
+                    {
+                        if (ctx.CurrentItemIdx == 0)
+                            ctx.ManagedPropertyNames.push(lineValueInfo.managedPropertyName);
+
+            _#-->
+            <td></td>
+            <!--#_
+                    }
+                    else
+                    {
+
+                        if (ctx.CurrentItemIdx == 0)
+                            ctx.ManagedPropertyNames.push(lineValueInfo.managedPropertyName);
+
+                        var columnName = ctx.ManagedPropertyNames[lineNum - 1];
+                        if (columnName == "Title")
+                        {
+            _#-->
+            <td> <a href="_#= infoPathUrl =#_" title="Click here to open file" target="_blank" class="rowTitleLink">_#= fileTitle =#_</a> </td>
+            <!--#_
+                        }
+                        else if(columnName == "ListItemID")
+                        {
+                            filePropertyView = filePropertyView + lineValueInfo;
+            _#-->
+            <td> <a href="_#= filePropertyView =#_" title="Click to view properties" class="rowTitleLink">_#= lineValueInfo =#_</a> </td>
+            <!--#_
+                        }
+                        else if (lineNum == 10)
+                        {
+            _#-->
+            <td>_#= lineValueInfo =#_ <div id="hoverRowSelected" class="ms-srch-hover-outerContainer" /></td>
+            <!--#_
+                       }
+                       else {
+                   _#-->
+            <td>_#= lineValueInfo =#_</td>
+            <!--#_
+                        }
+                    }
+            _#-->
+            <!--#_
+                }
+            }
+            _#-->
+        </tr>
+
+    </div>
+</body>
+</html>

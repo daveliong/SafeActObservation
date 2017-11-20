@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="DisplayTemplates" Url="_catalogs/masterpage/Display Templates/Content Web Parts" RootWebOnly="TRUE">
+    <File Path="DisplayTemplates\Control_SAO_ListHeader.html" Url="Control_SAO_ListHeader.html" Type="GhostableInLibrary" Level="Draft" ReplaceContent="TRUE" IgnoreIfAlreadyExists="TRUE">
+      <Property Name="FeatureId" Value="$SharePoint.Feature.Id$" Type="string"/>
+    </File>
+    <File Path="DisplayTemplates\Item_SAO_ListRow.html" Url="Item_SAO_ListRow.html" Type="GhostableInLibrary" Level="Draft" ReplaceContent="TRUE" IgnoreIfAlreadyExists="TRUE">
+      <Property Name="FeatureId" Value="$SharePoint.Feature.Id$" Type="string"/>
+    </File>
+    <File Path="DisplayTemplates\jquery.dataTables.min.js" Url="jquery.dataTables.min.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="DisplayTemplates\jquery.dataTables-1.min.js" Url="jquery.dataTables-1.min.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="DisplayTemplates\jquery-1.11.1.min.js" Url="jquery-1.11.1.min.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="DisplayTemplates\jquery-2.1.0.min.js" Url="jquery-2.1.0.min.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="DisplayTemplates\jquery-1.10.1.min.js" Url="jquery-1.10.1.min.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+    <File Path="DisplayTemplates\ShowMoreResults.js" Url="ShowMoreResults.js" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE"/>
+  </Module>
+</Elements>
