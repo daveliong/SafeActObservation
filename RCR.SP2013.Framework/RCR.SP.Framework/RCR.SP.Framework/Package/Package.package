@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="b1d834c6-cb87-4bda-8d35-eefe42144e0c" 
+        solutionId="b1d834c6-cb87-4bda-8d35-eefe42144e0c" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="RCR.SP.Framework"
+        sharePointProductVersion="15.0">
+</package>
